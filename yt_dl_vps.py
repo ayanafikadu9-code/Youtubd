@@ -13,10 +13,10 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeybo
 
 # === CONFIGURATION ===
 BOT_TOKEN = os.getenv('BOT_TOKEN')
-ADMIN_ID = 1266573274  
+ADMIN_ID = 6189362753  
 LOG_CHANNEL = '@channel username'  
-SUPPORT_CHANNEL = '@internet_366'  
-SUPPORT_USERNAME = '@codeofsaladin'  
+SUPPORT_CHANNEL = '@ayu_xu'  
+SUPPORT_USERNAME = '@ayanafekadu'  
 DOWNLOAD_PATH = Path(__file__).parent / 'downloads'
 MAX_FILE_SIZE = 50 * 1024 * 1024  
 FFMPEG_PATH = '/home/salahpro/ffmpeg'
