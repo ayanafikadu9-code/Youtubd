@@ -25,7 +25,7 @@ FFMPEG_PATH = '/home/salahpro/ffmpeg'
 DOWNLOAD_PATH.mkdir(exist_ok=True)
 
 # Initialize bot
-bot = telebot.TeleBot(BOT_TOKEN)
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 
 # === DATABASE SETUP ===
 DB_PATH = Path(__file__).parent / 'bot_data.db'
