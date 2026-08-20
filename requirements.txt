@@ -1,0 +1,6 @@
+yt-dlp>=2026.0.0
+python-telegram-bot>=20.0
+aiosqlite>=0.19.0
+python-dotenv>=1.0.0
+aiogram>=3.0.0  # Alternative async framework
+mutagen>=1.46.0  # For metadata handling
