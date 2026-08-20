@@ -12,23 +12,25 @@ import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
 
 # === CONFIGURATION ===
-BOT_TOKEN = 'bot token'
-ADMIN_ID = 1266573274  # Your Telegram user ID
-LOG_CHANNEL = '@channel username'  # Channel for logs (e.g., @mybotlogs)
-SUPPORT_CHANNEL = '@internet_366'  # Channel users must join
-SUPPORT_USERNAME = '@codeofsaladin'  # Support contact
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+ADMIN_ID = 1266573274  
+LOG_CHANNEL = '@channel username'  
+SUPPORT_CHANNEL = '@internet_366'  
+SUPPORT_USERNAME = '@codeofsaladin'  
 DOWNLOAD_PATH = Path(__file__).parent / 'downloads'
-MAX_FILE_SIZE = 50 * 1024 * 1024  # 50MB
+MAX_FILE_SIZE = 50 * 1024 * 1024  
 FFMPEG_PATH = '/home/salahpro/ffmpeg'
 
 # Create directories
 DOWNLOAD_PATH.mkdir(exist_ok=True)
 
-# Initialize bot
-BOT_TOKEN = os.getenv('BOT_TOKEN')
+# === INITIALIZE BOT (Place this right here around line 28) ===
+bot = telebot.TeleBot(BOT_TOKEN)
 
 # === DATABASE SETUP ===
 DB_PATH = Path(__file__).parent / 'bot_data.db'
+...
+
 
 def init_db():
     conn = sqlite3.connect(DB_PATH)
